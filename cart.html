@@ -23,6 +23,7 @@
         integrity="sha384-l0/0sn63N3mskDgRYJZA6Mogihu0VY3CusdLMiwpJ9LFPklOARUcOiWEIGGmFELx" crossorigin="anonymous">
         </script>
 
+        
     <title>Amazon 2.0</title>
 </head>
 
@@ -33,13 +34,15 @@
 
 
         <!-- the header section of the page------------ -->
-        <div class="header flex  h-16 bg-gray-900 items-center ">
+        <div class="header flex sticky top-0  h-16 bg-gray-900 items-center ">
 
             <!-- the logo of the company----- -->
             <div class="logo w-1/5 h-16 ml-10 ">
+                <a href="./index.html">
                 <img class=" w-28 h-16 object-contain "
                     src="https://www.pinclipart.com/picdir/big/57-576184_view-pur-amazon-storefront-amazon-logo-white-png.png"
                     alt="">
+                </a>
             </div>
 
             <!-- the search box------ -->
@@ -78,8 +81,8 @@
                 <div class="cart-icon bg-yellow-500 p-2.5 rounded-lg text-gray-600 cursor-pointer relative">
 
                     <span
-                        class="cart-item absolute  -top-1 -right-1 h-4 w-4 flex justify-center items-center rounded-full text-gray-800 text-xs  bg-white">
-                        2
+                        class="cart-item-number absolute  -top-1 -right-1 h-4 w-4 flex justify-center items-center rounded-full text-gray-800 text-xs  bg-white">
+                        <!-- value is displayed dynamically -->
                     </span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 " fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
@@ -189,132 +192,7 @@
                 <!-- all the cart-items container------------ -->
                 <div class="cart-items ">
 
-                    <!-- individual cart item -->
-                    <div class="cart-item flex items-center pb-4  border-b border-gray-100">
-
-                        <!-- the image of the item------------------ -->
-                        <div class="cart-item-image w-40 h-24 p-4 bg-white rounded-lg">
-                            <img class="w-full h-full object-contain"
-                                src="https://m.media-amazon.com/images/I/71an9eiBxpL._AC_UY218_.jpg" alt="">
-                        </div>
-
-                        <!-- the details of the item (name and brand) ------------ -->
-                        <div class="cart-item-details flex-grow">
-                            <div class="cart-item-title font-bold text-sm text-gray-600">
-                                Apple MAcBook Pro 13.3
-                            </div>
-                            <div class="cart-item-brand text-sm text-gray-400">
-                                Apple
-                            </div>
-                        </div>
-
-                        <!-- the counter to select the number of the same item------------ -->
-                        <div class="cart-item-counter w-48 flex items-center">
-
-                            <!-- the left chevron------- -->
-                            <div class="arrow-left hover:bg-gray-200 bg-gray-100 rounded cursor-pointer">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 19l-7-7 7-7" />
-                                </svg>
-                            </div>
-
-                            <!-- the number that show the number of items--- -->
-                            <h4 class="text-gray-400 mx-2">x1</h4>
-
-                            <!-- the right chevron------ -->
-                            <div class="arrow-right hover:bg-gray-200 bg-gray-100 rounded cursor-pointer">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 " fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </div>
-
-                        </div>
-
-                        <!-- this is the cost of the product------ -->
-                        <div class="cart-item-total-cost w-48  text-gray-400 font-bold">
-                            <h1>$1,149.00</h1>
-                        </div>
-
-                        <!-- this is the delete button to remove item from cart----------- -->
-                        <div class="cart-item-delete w-10 font-bold text-gray-300 cursor-pointer hover:text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- 2nd second item in the cart-- -->
-                    <div class="cart-item flex items-center pb-4  border-b border-gray-100">
-
-                        <!-- the image of the item------------------ -->
-                        <div class="cart-item-image w-40 h-24 p-4 bg-white rounded-lg">
-                            <img class="w-full h-full object-contain"
-                                src="https://m.media-amazon.com/images/I/71MHTD3uL4L._AC_UY218_.jpg" alt="">
-                        </div>
-
-                        <!-- the details of the item (name and brand) ------------ -->
-                        <div class="cart-item-details flex-grow">
-                            <div class="cart-item-title font-bold text-sm text-gray-600">
-                                New Apple iPhone 12 Pro Max (128GB) - Pacific Blue
-                            </div>
-                            <div class="cart-item-brand text-sm text-gray-400">
-                                Apple
-                            </div>
-                        </div>
-
-                        <!-- the counter to select the number of the same item------------ -->
-                        <div class="cart-item-counter w-48 flex items-center">
-
-                            <!-- the left chevron------- -->
-                            <div class="arrow-left hover:bg-gray-200 bg-gray-100 rounded cursor-pointer">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 19l-7-7 7-7" />
-                                </svg>
-                            </div>
-
-                            <!-- the number that show the number of items--- -->
-                            <h4 class="text-gray-400 mx-2">x1</h4>
-
-                            <!-- the right chevron------ -->
-                            <div class="arrow-right hover:bg-gray-200 bg-gray-100 rounded cursor-pointer">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 " fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 5l7 7-7 7" />
-                                </svg>
-                            </div>
-
-                        </div>
-
-                        <!-- this is the cost of the product------ -->
-                        <div class="cart-item-total-cost w-48  text-gray-400 font-bold">
-                            <h1>$1,587.79</h1>
-                        </div>
-
-                        <!-- this is the delete button to remove item from cart----------- -->
-                        <div class="cart-item-delete w-10 font-bold text-gray-300 cursor-pointer hover:text-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                fill="currentColor">
-                                <path fill-rule="evenodd"
-                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
-                                    clip-rule="evenodd" />
-                            </svg>
-                        </div>
-
-
-                    </div>
+                    <!-- individual cart item are rendered dynamically -->
 
                 </div>
 
@@ -325,7 +203,7 @@
 
                         <h2 class="text-gray-400 ">Total cost</h2>
                         <div class="total-cost-number font-bold text-3xl text-gray-600">
-                            $2,736.79
+                            <!-- is is dynamic -->
                         </div>
 
                     </div>
@@ -342,6 +220,30 @@
 
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+    
+    <script>
+        // < !--For Firebase JS SDK v7.20.0 and later, measurementId is optional-- >
+        const firebaseConfig = {
+            apiKey: "AIzaSyDvLZm2MNMpxI8IBY20mqYRXNBAbr1o6IU",
+            authDomain: "clone-one-83707.firebaseapp.com",
+            projectId: "clone-one-83707",
+            storageBucket: "clone-one-83707.appspot.com",
+            messagingSenderId: "877642561205",
+            appId: "1:877642561205:web:87b271ccff96acdbd8b0fc",
+            measurementId: "G-SZMTKDDW64"
+        };
+
+
+        const app = firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+
+
+    </script>
+    <script src="/header.js"></script>
+    <script src="/cart.js"></script>
 </body>
 
 </html>

@@ -5,11 +5,8 @@ const getItems = () => {
         let items = [];
         querySnapshot.forEach((doc) => {
             items.push({
-                "image": doc.data().image,
-                "make": doc.data().make,
-                "name": doc.data().name,
-                "price": doc.data().price,
-                "rating": doc.data().rating,
+                "id": doc.id,
+                ...doc.data()
             })
 
             // console.log(items)
@@ -25,13 +22,13 @@ getItems();
 //to add the item in the cart------------------------------
 function addToCart(item) {
     console.log(item)
-    let cartItem = db.collection('cart-items').doc(item.id)
+    let cartItem = db.collection('cart-items').doc(item.id);
 
     cartItem.get()
-        .then((doc) => {
-            if (doc.empty) {
+        .then(function (doc) {
+            if (doc.exists) {
                 cartItem.update({
-                    quantity: doc.data().quantity + 1
+                    quantity: doc.data().quantity + 1,
                 })
             }
             else {
@@ -39,8 +36,8 @@ function addToCart(item) {
                     image: item.image,
                     make: item.make,
                     name: item.name,
-                    rating: item.rating,
                     price: item.price,
+                    rating: item.rating,
                     quantity: 1
                 })
             }
@@ -51,7 +48,6 @@ function addToCart(item) {
 //the items are generated and renderd on the screen----------------
 
 const generateItems = (items) => {
-    var itemsHtml = ""
     items.forEach((item, index) => {
         let doc = document.createElement('div');
         doc.classList.add('product', 'w-60', 'p-6', 'bg-white');
@@ -73,7 +69,7 @@ const generateItems = (items) => {
                  </div>
     
                  <div class="product-price font-bold text-gray-700 text-lg">
-                     $${item.price}
+                     ${numeral(item.price).format('$0,0.00')}
                  </div>
 
             `

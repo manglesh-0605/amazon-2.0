@@ -34,7 +34,7 @@
 
 
         <!-- the header section of the page------------ -->
-        <div class="header flex  h-16 bg-gray-900 items-center ">
+        <div class="header sticky top-0 flex  h-16 bg-gray-900 items-center ">
 
             <!-- the logo of the company----- -->
             <div class="logo w-1/5 h-16 ml-10 ">
@@ -82,9 +82,9 @@
                     <div class="cart-icon bg-yellow-500 p-2.5 rounded-lg text-gray-600 cursor-pointer relative">
 
                         <span
-                            class="cart-item absolute  -top-1 -right-1 h-4 w-4 flex justify-center items-center rounded-full text-gray-800 text-xs  bg-white">
-                            2
-                        </span>
+                            class="cart-item-number absolute  -top-1 -right-1 h-4 w-4 flex justify-center items-center rounded-full text-gray-800 text-xs  bg-white">
+                            
+                            <!--This represents the total number of items in the cart--> </span>
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 " fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -112,7 +112,7 @@
         <main class="h-auto flex">
 
             <!-- this is sidebar section-------------- -->
-            <section class="sidebar-section w-1/5 bg-gray-900 border-gray-700 border-t-2 border-opacity-75 p-6">
+            <section class="sidebar-section  w-1/5 bg-gray-900 border-gray-700 border-t-2 border-opacity-75 p-6">
 
                 <!-- this is sidebar categories container with some padding from origonal sidebar--------------- -->
                 <div class="sidebar-categories">
@@ -198,9 +198,9 @@
                         </svg>
                     </h1>
 
-                    <div class="category-icons  flex">
+                    <div class="category-icons   flex flex-wrap">
 
-                        <div class="icon-desktop h-20 w-20  bg-white flex items-center justify-center cursor-pointer">
+                        <div class="icon-desktop h-20 w-20  bg-white flex items-center justify-center mr-6 mt-5 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -209,7 +209,7 @@
                         </div>
 
                         <div
-                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center ml-6 cursor-pointer">
+                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center mr-6 mt-5  cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -218,7 +218,7 @@
                         </div>
 
                         <div
-                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center ml-6 cursor-pointer">
+                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center mr-6 mt-5  cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -226,7 +226,7 @@
                             </svg>
                         </div>
                         <div
-                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center ml-6 cursor-pointer">
+                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center mr-6 mt-5 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -234,7 +234,7 @@
                             </svg>
                         </div>
                         <div
-                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center ml-6 cursor-pointer">
+                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center mr-6 mt-5  cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -244,7 +244,7 @@
                             </svg>
                         </div>
                         <div
-                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center ml-6 cursor-pointer">
+                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center mr-6  mt-5 cursor-pointer">
                             <svg xmlns=" http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -252,7 +252,7 @@
                             </svg>
                         </div>
                         <div
-                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center ml-6 cursor-pointer">
+                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center mr-6 mt-5  cursor-pointer">
                             <svg xmlns=" http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -260,7 +260,7 @@
                             </svg>
                         </div>
                         <div
-                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center ml-6 cursor-pointer">
+                            class="icon-desktop h-20 w-20  bg-white flex items-center justify-center mr-6 mt-5 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-500 " fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -304,6 +304,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 
     <script>
         // < !--For Firebase JS SDK v7.20.0 and later, measurementId is optional-- >
@@ -324,6 +325,7 @@
 
     </script>
     <script src="/script.js"></script>
+    <script src="/header.js"></script>
 </body>
 
 </html>
