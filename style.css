@@ -1,7 +1,7 @@
 .main-section-products {
-  max-width: 80vw;
-  height: 520px;
+  /* height: 520px; */
   overflow-x: auto;
+  max-width: 80vw;
   overflow-y: hidden;
 }
 .main-section-products::-webkit-scrollbar {
@@ -18,4 +18,15 @@
 } */
 .product-make {
   height: 40px;
+}
+
+
+@media all and (max-width:1250px){
+  .sidebar-section{
+    display: none;
+
+  }
+  .main-section-products{
+    max-width:96vw ;
+  }
 }
