@@ -1,0 +1,21 @@
+.main-section-products {
+  max-width: 80vw;
+  height: 520px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.main-section-products::-webkit-scrollbar {
+  display: none;
+}
+
+.product-name {
+  height: 100px;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+}
+/* .product-name::-webkit-scrollbar {
+  display: none;
+} */
+.product-make {
+  height: 40px;
+}
